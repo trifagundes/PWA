@@ -1,12 +1,12 @@
 /* CSS variables for variables / design tokens */
 :root {
   --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  
+
   /* HSL Colors */
   --bg-color-h: 240;
   --bg-color-s: 15%;
   --bg-color-l: 5%;
-  
+
   --surface-color-h: 240;
   --surface-color-s: 10%;
   --surface-color-l: 9%;
@@ -16,21 +16,21 @@
   --bg-surface: hsl(var(--surface-color-h), var(--surface-color-s), var(--surface-color-l));
   --bg-surface-glass: hsla(var(--surface-color-h), var(--surface-color-s), var(--surface-color-l), 0.7);
   --border-color: hsla(240, 5%, 20%, 0.4);
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
+
   /* Accent Gradients & Colors */
   --primary-gradient: linear-gradient(135deg, hsl(265, 85%, 60%) 0%, hsl(325, 85%, 55%) 100%);
   --primary-color: hsl(285, 85%, 60%);
   --secondary-color: hsl(185, 90%, 50%);
   --accent-glow: 0 8px 30px rgba(168, 85, 247, 0.2);
   --glass-glow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  
+
   --success: hsl(142, 70%, 45%);
   --error: hsl(350, 80%, 55%);
-  
+
   /* Layout */
   --header-height: 64px;
   --nav-height: 72px;
@@ -39,7 +39,7 @@
   --border-radius-lg: 24px;
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  
+
   /* Safe Areas (Default to 0px for standard browser view) */
   --safe-top: 0px;
   --safe-bottom: 0px;
@@ -76,9 +76,11 @@ body.light-mode {
 }
 
 /* Base Body Styles */
-html, body {
+html,
+body {
   height: 100%;
-  overflow: hidden; /* Evita rolagem da página inteira no desktop/dispositivos móveis */
+  overflow: hidden;
+  /* Evita rolagem da página inteira no desktop/dispositivos móveis */
   background-color: var(--bg-app);
 }
 
@@ -91,7 +93,8 @@ body {
   overflow: hidden;
 }
 
-html, body {
+html,
+body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -99,18 +102,21 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px; /* Estilo Mobile App centralizado em telas maiores */
+  max-width: 600px;
+  /* Estilo Mobile App centralizado em telas maiores */
   margin: 0 auto;
   height: 100%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   position: relative;
   background-color: var(--bg-app);
-  overflow: hidden; /* Mantém o header e bottom-nav fixos e o main rolável */
+  overflow: hidden;
+  /* Mantém o header e bottom-nav fixos e o main rolável */
 }
 
 /* App Header */
 .app-header {
-  position: relative; /* Mudado de fixed para relative para evitar bugs em preview/iframes */
+  position: relative;
+  /* Mudado de fixed para relative para evitar bugs em preview/iframes */
   width: 100%;
   height: calc(var(--header-height) + var(--safe-top));
   padding-top: var(--safe-top);
@@ -121,7 +127,8 @@ html, body {
   z-index: 100;
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Impede encolhimento do header */
+  flex-shrink: 0;
+  /* Impede encolhimento do header */
   transition: var(--transition-smooth);
 }
 
@@ -178,11 +185,13 @@ html, body {
 /* Main View Area */
 main {
   flex: 1;
-  padding: 16px 20px 24px 20px; /* Padding simplificado, pois header e nav não se sobrepõem mais */
+  padding: 16px 20px 24px 20px;
+  /* Padding simplificado, pois header e nav não se sobrepõem mais */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Rolagem suave no iOS */
 }
 
 /* Animations */
@@ -195,6 +204,7 @@ main {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -203,7 +213,8 @@ main {
 
 /* Bottom Navigation */
 .bottom-nav {
-  position: relative; /* Mudado de fixed para relative para perfeita ancoragem no contêiner #app */
+  position: relative;
+  /* Mudado de fixed para relative para perfeita ancoragem no contêiner #app */
   width: 100%;
   height: calc(var(--nav-height) + var(--safe-bottom));
   padding-bottom: var(--safe-bottom);
@@ -215,7 +226,8 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-shrink: 0; /* Impede encolhimento do nav */
+  flex-shrink: 0;
+  /* Impede encolhimento do nav */
 }
 
 .nav-item {
@@ -239,7 +251,8 @@ main {
   transition: var(--transition-bounce);
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
   color: var(--text-primary);
 }
 
@@ -301,11 +314,13 @@ main {
   overflow-x: auto;
   padding: 4px 0 16px 0;
   margin-bottom: 8px;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .categories-tabs::-webkit-scrollbar {
-  display: none; /* Safari & Chrome */
+  display: none;
+  /* Safari & Chrome */
 }
 
 .category-tab {
@@ -781,7 +796,9 @@ main {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ======================== */
@@ -800,7 +817,8 @@ main {
   -webkit-backdrop-filter: blur(8px);
   z-index: 200;
   display: flex;
-  align-items: flex-end; /* Abre como Bottom Sheet no mobile */
+  align-items: flex-end;
+  /* Abre como Bottom Sheet no mobile */
   justify-content: center;
   opacity: 0;
   pointer-events: none;
@@ -1101,16 +1119,19 @@ main {
   0% {
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
   }
 }
 
 .drawer-overlay {
-  position: absolute; /* Prende a gaveta no app shell (#app) */
+  position: absolute;
+  /* Prende a gaveta no app shell (#app) */
   top: 0;
   left: 0;
   right: 0;
