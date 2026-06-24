@@ -45,8 +45,8 @@
   --safe-bottom: 0px;
 }
 
-/* Safe Areas for Standalone PWA mode on mobile devices */
-@media (display-mode: standalone) {
+/* Safe Areas for Standalone and Fullscreen PWA modes on mobile devices */
+@media (display-mode: standalone), (display-mode: fullscreen) {
   :root {
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: 0px;
