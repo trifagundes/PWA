@@ -3,10 +3,6 @@
   "short_name": "Agnostic",
   "start_url": "index.html",
   "display": "fullscreen",
-  "display_override": [
-    "fullscreen",
-    "standalone"
-  ],
   "background_color": "#0b0a0e",
   "theme_color": "#131217",
   "icons": [

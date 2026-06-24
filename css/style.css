@@ -109,8 +109,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(var(--header-height) + var(--safe-top));
-  padding-top: var(--safe-top);
+  height: var(--header-height);
   background-color: var(--bg-surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -177,7 +176,7 @@ body {
 /* Main View Area */
 main {
   flex: 1;
-  padding: calc(var(--header-height) + var(--safe-top) + 16px) 20px calc(var(--nav-height) + var(--safe-bottom) + 24px) 20px;
+  padding: calc(var(--header-height) + 16px) 20px calc(var(--nav-height) + var(--safe-bottom) + 24px) 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
