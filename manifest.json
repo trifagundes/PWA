@@ -1,0 +1,21 @@
+{
+  "name": "Agnostic PWA",
+  "short_name": "Agnostic",
+  "start_url": "index.html",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone"],
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "icons": [
+    {
+      "src": "images/icons/launchericon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/launchericon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

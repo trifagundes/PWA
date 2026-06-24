@@ -1,0 +1,11 @@
+{
+  "name": "agnostic-pwa",
+  "version": "1.0.0",
+  "description": "PWA Agnóstico em Vanilla JS",
+  "scripts": {
+    "start": "http-server -p 8080"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

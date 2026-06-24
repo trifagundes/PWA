@@ -1,0 +1,77 @@
+[
+  {
+    "id": "lumina-sound",
+    "categoryId": "audio",
+    "title": "Lumina Soundscape",
+    "description": "Sistema de som de alta fidelidade com iluminação adaptativa integrada. Sincroniza áudio imersivo de 360 graus com luzes dinâmicas para criar a atmosfera perfeita em qualquer ambiente doméstico ou profissional.",
+    "price": "R$ 2.499,00",
+    "image": "images/lumina.jpg",
+    "available": true,
+    "specs": {
+      "Conectividade": "Wi-Fi 6, Bluetooth 5.2, AirPlay 2",
+      "Potência": "120W RMS",
+      "Dimensões": "18 x 18 x 25 cm",
+      "Material": "Alumínio reciclado e tecido acústico"
+    }
+  },
+  {
+    "id": "eclipse-aura",
+    "categoryId": "lighting",
+    "title": "Luminária Eclipse Aura",
+    "description": "Luminária inteligente de design minimalista escandinavo que simula os ciclos solares e lunares para melhorar o bem-estar e o foco. Controle completo por gestos e aplicativo.",
+    "price": "R$ 890,00",
+    "image": "images/eclipse.jpg",
+    "available": true,
+    "specs": {
+      "Brilho Máximo": "1200 Lúmens",
+      "Temperatura": "1800K - 6500K",
+      "Consumo": "15W",
+      "Alimentação": "USB-C"
+    }
+  },
+  {
+    "id": "aeris-chair",
+    "categoryId": "decor",
+    "title": "Cadeira Aeris Ergonomic",
+    "description": "Cadeira ergonômica premium com suporte lombar autoajustável e materiais respiráveis de engenharia aeroespacial. Projetada para proporcionar conforto extremo durante longas sessões de uso.",
+    "price": "R$ 3.120,00",
+    "image": "images/aeris.jpg",
+    "available": true,
+    "specs": {
+      "Ajustes": "Altura, inclinação, lombar e braços 4D",
+      "Peso Suportado": "Até 150 kg",
+      "Certificações": "BIFMA, Ergonomics Approved",
+      "Garantia": "5 Anos"
+    }
+  },
+  {
+    "id": "cinema-cube",
+    "categoryId": "tech",
+    "title": "Projetor Cinema Cube 4K",
+    "description": "Projetor inteligente ultraportátil com resolução nativa 4K UHD, ajuste trapezoidal automático e sistema de som Dolby Digital embarcado. Ideal para qualquer superfície plana.",
+    "price": "R$ 4.799,00",
+    "image": "images/cinema.jpg",
+    "available": false,
+    "specs": {
+      "Resolução": "4K UHD Nativo (3840 x 2160)",
+      "Brilho": "2200 ANSI Lúmens",
+      "Sistema": "Android TV OS",
+      "Vida da Lâmpada": "30.000 horas"
+    }
+  },
+  {
+    "id": "aether-key",
+    "categoryId": "tech",
+    "title": "Teclado Aether Mechanical",
+    "description": "Teclado mecânico compacto (75%) sem fio com switches premium táteis de perfil baixo e silenciosos. Carcaça em alumínio cnc de peça única e iluminação branca discreta.",
+    "price": "R$ 1.150,00",
+    "image": "images/aether.jpg",
+    "available": true,
+    "specs": {
+      "Switches": "Aether Brown Tactile (Silencioso)",
+      "Bateria": "Até 200 horas (LEDs desligados)",
+      "Layout": "ANSI (Compacto 75%)",
+      "Peso": "780g"
+    }
+  }
+]

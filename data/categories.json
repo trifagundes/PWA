@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tech",
+    "name": "Dispositivos",
+    "icon": "cpu"
+  },
+  {
+    "id": "decor",
+    "name": "Design",
+    "icon": "feather"
+  },
+  {
+    "id": "lighting",
+    "name": "Luz",
+    "icon": "sun"
+  },
+  {
+    "id": "audio",
+    "name": "Áudio",
+    "icon": "volume-2"
+  }
+]
