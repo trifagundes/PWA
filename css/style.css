@@ -104,8 +104,10 @@ body {
 
 /* App Header */
 .app-header {
-  position: relative;
-  /* Mudado de fixed para relative para evitar bugs em preview/iframes */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: calc(var(--header-height) + var(--safe-top));
   padding-top: var(--safe-top);
@@ -175,8 +177,7 @@ body {
 /* Main View Area */
 main {
   flex: 1;
-  padding: 16px 20px 24px 20px;
-  /* Padding simplificado, pois header e nav não se sobrepõem mais */
+  padding: calc(var(--header-height) + var(--safe-top) + 16px) 20px calc(var(--nav-height) + var(--safe-bottom) + 24px) 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -203,8 +204,10 @@ main {
 
 /* Bottom Navigation */
 .bottom-nav {
-  position: relative;
-  /* Mudado de fixed para relative para perfeita ancoragem no contêiner #app */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: calc(var(--nav-height) + var(--safe-bottom));
   padding-bottom: var(--safe-bottom);
