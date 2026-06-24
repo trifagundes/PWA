@@ -2,7 +2,11 @@
   "name": "Agnostic PWA",
   "short_name": "Agnostic",
   "start_url": "index.html",
-  "display": "fullscreen",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "fullscreen"
+  ],
   "background_color": "#121216",
   "theme_color": "#121216",
   "icons": [
