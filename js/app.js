@@ -20,15 +20,27 @@ function initTheme() {
   const themeToggleBtn = document.getElementById('btn-theme-toggle');
   const savedTheme = localStorage.getItem('pwa_theme') || 'dark';
   
+  const updateThemeColor = (isLight) => {
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', isLight ? '#f4f4f6' : '#0b0b0f');
+    }
+  };
+
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
+    updateThemeColor(true);
+  } else {
+    updateThemeColor(false);
   }
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
-      const currentTheme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+      const isLight = document.body.classList.contains('light-mode');
+      const currentTheme = isLight ? 'light' : 'dark';
       localStorage.setItem('pwa_theme', currentTheme);
+      updateThemeColor(isLight);
     });
   }
 }

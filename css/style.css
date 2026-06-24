@@ -65,16 +65,19 @@ body.light-mode {
 html, body {
   height: 100%;
   overflow: hidden; /* Evita rolagem da página inteira no desktop/dispositivos móveis */
+  background-color: var(--bg-app);
 }
 
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-app);
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+}
+
+html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
