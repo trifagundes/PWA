@@ -23,7 +23,7 @@ function initTheme() {
   const updateThemeColor = (isLight) => {
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
     if (themeColorMeta) {
-      themeColorMeta.setAttribute('content', isLight ? '#fafafc' : '#121216');
+      themeColorMeta.setAttribute('content', isLight ? '#f4f4f7' : '#131217');
     }
   };
 

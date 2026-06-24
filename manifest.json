@@ -7,8 +7,8 @@
     "fullscreen",
     "standalone"
   ],
-  "background_color": "#121216",
-  "theme_color": "#121216",
+  "background_color": "#0b0a0e",
+  "theme_color": "#131217",
   "icons": [
     {
       "src": "images/icons/launchericon-192x192.png",
