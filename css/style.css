@@ -40,24 +40,9 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /* Safe Areas (Default to 0px for standard browser view) */
-  --safe-top: 0px;
-  --safe-bottom: 0px;
-}
-
-/* Safe Areas for Standalone and Fullscreen PWA modes on mobile devices */
-@media (display-mode: standalone),
-(display-mode: fullscreen) {
-  :root {
-    --safe-top: 0px;
-    --safe-bottom: 0px;
-  }
-}
-
-/* Specific Safe Areas override for iOS PWA */
-html.ios-standalone {
-  --safe-top: env(safe-area-inset-top, 44px);
-  --safe-bottom: env(safe-area-inset-bottom, 30px);
+  /* Safe Areas (Calculado dinamicamente pelo navegador para preenchimento de tela cheia/notch) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Light Mode Overrides */
