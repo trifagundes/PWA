@@ -2,7 +2,7 @@
   "name": "Agnostic PWA",
   "short_name": "Agnostic",
   "start_url": "index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "display_override": [
     "standalone",
     "fullscreen"
