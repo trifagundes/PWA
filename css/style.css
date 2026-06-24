@@ -49,7 +49,7 @@
 @media (display-mode: standalone) {
   :root {
     --safe-top: env(safe-area-inset-top, 0px);
-    --safe-bottom: 0px;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
   }
 }
 
@@ -79,6 +79,7 @@ body.light-mode {
 html,
 body {
   height: 100%;
+  height: 100dvh;
   overflow: hidden;
   /* Evita rolagem da página inteira no desktop/dispositivos móveis */
   background-color: var(--bg-app);
@@ -90,6 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -106,6 +108,7 @@ body {
   /* Estilo Mobile App centralizado em telas maiores */
   margin: 0 auto;
   height: 100%;
+  height: 100dvh;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   position: relative;
   background-color: var(--bg-app);

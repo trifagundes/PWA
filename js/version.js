@@ -1,1 +1,1 @@
-export const APP_VERSION = 'agnostic-pwa-v1782267664911';
+export const APP_VERSION = 'agnostic-pwa-v1782268106356';
