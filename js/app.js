@@ -71,6 +71,13 @@ function registerServiceWorker() {
 
 // Inicialização do fluxo principal da aplicação
 async function initApp() {
+  // Detecta se é iOS e se está rodando como standalone PWA
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  if (isIOS && isStandalone) {
+    document.documentElement.classList.add('ios-standalone');
+  }
+
   initTheme();
   registerServiceWorker();
 
