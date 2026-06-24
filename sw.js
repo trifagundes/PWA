@@ -1,4 +1,4 @@
-const CACHE_NAME = 'agnostic-pwa-v1782267230618';
+const CACHE_NAME = 'agnostic-pwa-v1782267664911';
 const ASSETS = [
   'index.html',
   'manifest.json',
