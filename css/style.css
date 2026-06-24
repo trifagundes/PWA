@@ -48,7 +48,7 @@
 /* Safe Areas for Standalone PWA mode on mobile devices */
 @media (display-mode: standalone) {
   :root {
-    --safe-top: max(env(safe-area-inset-top), 28px);
+    --safe-top: max(env(safe-area-inset-top), 16px);
     --safe-bottom: max(env(safe-area-inset-bottom), 16px);
   }
 }
