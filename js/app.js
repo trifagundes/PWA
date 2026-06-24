@@ -45,6 +45,15 @@ function registerServiceWorker() {
           console.error('PWA: Falha ao registrar Service Worker:', error);
         });
     });
+
+    // Recarrega a página automaticamente quando um novo Service Worker assume o controle
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!refreshing) {
+        refreshing = true;
+        window.location.reload();
+      }
+    });
   }
 }
 
