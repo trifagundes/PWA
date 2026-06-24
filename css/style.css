@@ -49,7 +49,7 @@
 @media (display-mode: standalone) {
   :root {
     --safe-top: env(safe-area-inset-top, 0px);
-    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-bottom: 0px;
   }
 }
 
