@@ -6,6 +6,7 @@ import DetailView from './views/detail.js';
 import FavoritesView from './views/favorites.js';
 import ProfileView from './views/profile.js';
 import { initNotificationDrawer } from './components/notification-drawer.js';
+import { APP_VERSION } from './version.js';
 
 // Inicialização do Roteador no container de views
 const router = new Router('view-container');
@@ -51,6 +52,12 @@ function registerServiceWorker() {
 async function initApp() {
   initTheme();
   registerServiceWorker();
+
+  // Exibe a versão atual do app no header
+  const versionEl = document.getElementById('app-version');
+  if (versionEl) {
+    versionEl.textContent = APP_VERSION.replace('agnostic-pwa-', '');
+  }
   
   // Ativa estado de carregamento
   store.setState({ loading: true });

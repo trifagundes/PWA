@@ -32,7 +32,10 @@
     <!-- Header/Navigation Shell -->
     <header class="app-header">
       <div class="header-content">
-        <h1 class="app-logo">Agnostic<span>App</span></h1>
+        <div class="logo-container" style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
+          <h1 class="app-logo" style="margin: 0; line-height: 1;">Agnostic<span>App</span></h1>
+          <span id="app-version" style="font-size: 0.6rem; color: var(--text-muted); font-weight: 500; font-family: monospace; letter-spacing: 0.5px;">v...</span>
+        </div>
         <div class="header-actions" style="display: flex; gap: 8px;">
           <button id="btn-notifications" class="icon-btn" aria-label="Notificações" style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
