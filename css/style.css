@@ -40,15 +40,23 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   
-  /* Safe Areas (Default to 0px for Android and Desktop to prevent double status bar gaps) */
+  /* Safe Areas (Default to 0px for standard browser view) */
   --safe-top: 0px;
   --safe-bottom: 0px;
 }
 
-/* Safe Areas override specifically for iOS PWA in Standalone mode */
+/* Safe Areas for Standalone PWA mode on mobile devices */
+@media (display-mode: standalone) {
+  :root {
+    --safe-top: max(env(safe-area-inset-top), 28px);
+    --safe-bottom: max(env(safe-area-inset-bottom), 16px);
+  }
+}
+
+/* Specific Safe Areas override for iOS PWA */
 html.ios-standalone {
-  --safe-top: env(safe-area-inset-top, 20px);
-  --safe-bottom: env(safe-area-inset-bottom, 20px);
+  --safe-top: env(safe-area-inset-top, 44px);
+  --safe-bottom: env(safe-area-inset-bottom, 30px);
 }
 
 /* Light Mode Overrides */
