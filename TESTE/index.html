@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PWA Teste</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>HEADER ABSOLUTO</h1>
+    </header>
+    
+    <main class="app-main">
+      <div class="content">
+        <h2>Conteúdo Central</h2>
+        <p>Este é um projeto simples para testar o comportamento do posicionamento colado nos limites físicos do celular.</p>
+        <p>Use a rolagem para verificar se o conteúdo passa por trás do header e do footer translúcidos.</p>
+        <div style="height: 1000px; background: linear-gradient(to bottom, #1e1b4b, #311042); margin-top: 20px; border-radius: 12px; padding: 20px; color: #a5b4fc; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 1px dashed rgba(255,255,255,0.2);">
+          Área de Teste de Rolagem (1000px de altura)
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <h1>FOOTER ABSOLUTO</h1>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
