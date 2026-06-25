@@ -1,8 +1,7 @@
-const CACHE_NAME = 'agnostic-pwa-v1782278104708';
+const CACHE_NAME = 'agnostic-pwa-v1782345421105';
 const ASSETS = [
   'index.html',
   'teste.html',
-  'manifest.json',
   'css/reset.css',
   'css/style.css',
   'css/teste.css',
@@ -49,6 +48,12 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (!event.request.url.startsWith(self.location.origin)) return;
+
+  // Evita cachear o manifesto para que as atualizações de display se propaguem imediatamente
+  if (event.request.url.includes('manifest.json')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
